@@ -1,4 +1,4 @@
-# aplikasi-penjualan-jam-tangan
+
                              .MODEL LARGE
 .STACK 1000H
 .DATA
