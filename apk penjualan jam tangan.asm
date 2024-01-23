@@ -1,4 +1,4 @@
-                             .MODEL LARGE
+.MODEL LARGE
 .STACK 1000H
 .DATA
 
@@ -123,23 +123,23 @@ MAIN PROC
     sub bh,48
     
     cmp bh,1
-    je FullFace 
+    je casio 
     
     cmp bh,2
-    je Modular 
+    je fossil 
     
     cmp bh,3
-    je Motocross
+    je orient
     
     cmp bh,4
-    je OpenFace 
+    je seiko 
                 
     jmp invalid            
 
     
-    FullFace:
+     casio:
     
-    mov ah,9     ;FullFace starts
+    mov ah,9     ;casio starts
     lea dx,ac
     int 21h    
     
@@ -341,7 +341,7 @@ MAIN PROC
            
     
     
-    Modular:
+    fossil:
     
     mov ah,9
     lea dx,ac
@@ -539,7 +539,7 @@ MAIN PROC
     
      
     
-    Motocross:
+    orient:
     
     mov ah,9
     lea dx,ac
@@ -606,7 +606,7 @@ MAIN PROC
     
     
     
-    OpenFace:
+    seiko:
     
     mov ah,9
     lea dx,ac
